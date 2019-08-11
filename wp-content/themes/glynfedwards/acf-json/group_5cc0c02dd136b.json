@@ -1,6 +1,6 @@
 {
     "key": "group_5cc0c02dd136b",
-    "title": "TUPAS Site Settings",
+    "title": "Site Settings",
     "fields": [
         {
             "key": "field_5cc20e62d78cb",
@@ -70,10 +70,10 @@
             "placeholder": ""
         },
         {
-            "key": "field_5cc20eddd78cf",
-            "label": "Location",
-            "name": "",
-            "type": "tab",
+            "key": "field_5d4fe75545856",
+            "label": "LinkedIn",
+            "name": "social_linkedin",
+            "type": "url",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -82,26 +82,8 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5cc20efbd78d0",
-            "label": "Google Map",
-            "name": "google_map",
-            "type": "google_map",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "center_lat": "",
-            "center_lng": "",
-            "zoom": "",
-            "height": ""
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -109,7 +91,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "tupas-settings"
+                "value": "site-settings"
             }
         ]
     ],
@@ -136,5 +118,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1556221949
+    "modified": 1565517666
 }

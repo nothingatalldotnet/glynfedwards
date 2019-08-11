@@ -5,7 +5,7 @@
   "author": "R.Jones",
   "private": true,
   "devDependencies": {
-    "gulp": "3.9.1",
+    "gulp": "latest",
     "gulp-changed": "latest",
     "gulp-livereload": "latest",
     "gulp-sass": "latest",

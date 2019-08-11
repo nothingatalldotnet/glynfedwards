@@ -149,16 +149,13 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "permalink",
         "the_content",
         "excerpt",
         "discussion",
         "comments",
         "revisions",
-        "slug",
         "author",
         "format",
-        "page_attributes",
         "featured_image",
         "categories",
         "tags",
@@ -166,5 +163,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1565524495
+    "modified": 1565526654
 }

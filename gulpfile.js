@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer');
 
-var theme = 'wp-content/themes/tupas/';
+var theme = 'wp-content/themes/glynfedwards/';
 
 
 gulp.task('sass', function(){

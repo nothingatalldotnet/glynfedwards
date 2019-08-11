@@ -17,7 +17,7 @@
 
     // post types
     function create_post_type() {
-        register_post_type('News',
+        register_post_type('news',
             array(
                 'labels' => array(
                     'name' => __('News'),
@@ -32,6 +32,27 @@
                 'supports' => array('title','revisions'),
                 'rewrite' => array(
                     'slug'  => 'news',
+                    'pages' => true,
+                    'with_front' => true
+                ),
+            )
+        );
+
+        register_post_type('scrapbook',
+            array(
+                'labels' => array(
+                    'name' => __('Scrapbook'),
+                    'singular_name' => _('Scrapbook')
+                ),
+                'show_in_nav_menus' => true,
+                'menu_position'=> 20,
+                'menu_icon' => 'dashicons-megaphone',
+                'public' => true,
+                'has_archive' => true,
+                'query_var' => true,
+                'supports' => array('title','revisions'),
+                'rewrite' => array(
+                    'slug'  => 'scrapbook',
                     'pages' => true,
                     'with_front' => true
                 ),

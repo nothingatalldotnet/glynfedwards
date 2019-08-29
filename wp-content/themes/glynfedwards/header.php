@@ -46,11 +46,17 @@
 ?>
 					</div>
 				</li>
+				<li class="search">
+					<div class="search-wrapper">
+						<input id="search" placeholder="Search">
+						<div class="search-results"></div>
+					</div>
+				</li>
 				<li class="description">
 					<?php echo $menu_description; ?>
 				</li>
 
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'main-menu' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_id' => 'main-menu' ) ); ?>
 
 <!--
 				<li>

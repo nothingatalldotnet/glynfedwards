@@ -38,6 +38,48 @@
             )
         );
 
+        register_post_type('testimonials',
+            array(
+                'labels' => array(
+                    'name' => __('Testimonials'),
+                    'singular_name' => _('Testimonials')
+                ),
+                'show_in_nav_menus' => true,
+                'menu_position'=> 20,
+                'menu_icon' => 'dashicons-format-quote',
+                'public' => true,
+                'has_archive' => true,
+                'query_var' => true,
+                'supports' => array('title','revisions'),
+                'rewrite' => array(
+                    'slug'  => 'events',
+                    'pages' => true,
+                    'with_front' => true
+                ),
+            )
+        );
+
+        register_post_type('events',
+            array(
+                'labels' => array(
+                    'name' => __('Events'),
+                    'singular_name' => _('Events')
+                ),
+                'show_in_nav_menus' => true,
+                'menu_position'=> 20,
+                'menu_icon' => 'dashicons-tickets-alt',
+                'public' => true,
+                'has_archive' => true,
+                'query_var' => true,
+                'supports' => array('title','revisions'),
+                'rewrite' => array(
+                    'slug'  => 'events',
+                    'pages' => true,
+                    'with_front' => true
+                ),
+            )
+        );
+
         register_post_type('scrapbook',
             array(
                 'labels' => array(
@@ -46,7 +88,7 @@
                 ),
                 'show_in_nav_menus' => true,
                 'menu_position'=> 20,
-                'menu_icon' => 'dashicons-megaphone',
+                'menu_icon' => 'dashicons-book',
                 'public' => true,
                 'has_archive' => true,
                 'query_var' => true,

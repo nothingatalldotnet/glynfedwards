@@ -1,35 +1,67 @@
 body {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	background: #565656;
 }
 
-
 /* Menu stuff */
+header .sidenav {
+	background: #3c3c3c;
+}
 
-.sidenav a.logo {
-	font-size: 32px;
-	font-weight: 400;
+header .sidenav li {
+	margin-left: 32px;
+}
+
+header .sidenav li.logo a {
+	height: auto;
+	margin-top: 28px;
+	padding-right: 32px !important;
+}
+
+.sidenav li>a {
+	padding: 0 !important;
+}
+
+.sidenav li.active a {
+	color: #920015;
+	background: #3c3c3c;
+}
+
+.sidenav a .site-logo {
+	width: 100%;
+}
+
+.sidenav .search input {
+	font-family: 'Montserrat', sans-serif;
+	box-shadow: none !important;
+	border: #565656;
+}
+
+.sidenav .search input:focus {
+    border-top: 1px solid #d1001e !important;
+    border-bottom: 1px solid #d1001e !important;
+    box-shadow: none !important;
 }
 
 .sidenav .social {
 	display: flex;
 	justify-content: space-between;
-	padding-left: 32px;
 	padding-right: 32px;
 }
 
 .sidenav .social i {
-	transition: background 0.2s, color 0.2s;	
+	transition: color 0.2s;
+	color:#920015;
 }
 
 .sidenav .social i:hover {
-	background: rgba(255,255,255,1);
-	color: #64bb5d;
+	color:#d1001e;
 }
 
 .sidenav .search input {
-	border-top: 1px solid #9e9e9e;
-	border-bottom: 1px solid #9e9e9e;
-	margin-left: 32px;
+	border-top: 1px solid #565656;
+	border-bottom: 1px solid #565656;
+	transition: border 0.2s;
 }
 
 .sidenav .search input:focus {
@@ -38,11 +70,10 @@ body {
 }
 
 .sidenav .description {
-	margin-left: 32px;
 	padding-right: 32px;
 	padding-bottom: 16px;
 	line-height: 24px;
-	border-bottom: 1px solid #9e9e9e;
+	border-bottom: 1px solid #565656;
 	font-weight: 400;
 }
 
@@ -51,13 +82,12 @@ body {
 	left: 16px;
 	top: 16px;
 	transition: background 0.2s, color 0.2s;
+	color: #920015;
 }
 
 .sidenav-trigger:hover {
-	background: rgba(255,255,255,1);
-	color: #64bb5d;
+	color: #d1001e;
 }
-
 
 .hidden-content {
 	display: none;

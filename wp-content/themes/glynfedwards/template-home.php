@@ -5,4 +5,3 @@
 
 
 	get_footer();
-?>

@@ -2,11 +2,11 @@
 <html <?php language_attributes(); ?>>
 	<head profile="http://gmpg.org/xfn/11">
 		<?php wp_head(); ?>
-		<meta name="theme-color" content="#ffffff">
+		<meta name="theme-color" content="#565656">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<script src="https://kit.fontawesome.com/bb20656c21.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
 	</head>
 	<body <?php body_class(); ?>>
 <?php
@@ -15,15 +15,15 @@
 		$social_instagram = get_field('social_instagram', 'option');
 		$social_linkedin = get_field('social_linkedin', 'option');
 		$contact_email = get_field('contact_email', 'option');
-
 		$menu_title = get_field('menu_title', 'option');
 		$menu_description =  get_field('menu_description', 'option');
 ?>
-
 		<header>
 			<ul id="slide-out" class="sidenav sidenav-fixed">
-				<li>
-					<a href="/" class="logo"><?php echo $menu_title; ?></a>
+				<li class="logo">
+					<a href="/" class="logo">
+						<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.png'; ?>" class="site-logo">
+					</a>
 				</li>
 				<li>
 					<div class="social">
@@ -52,29 +52,8 @@
 						<div class="search-results"></div>
 					</div>
 				</li>
-				<li class="description">
-					<?php echo $menu_description; ?>
-				</li>
-
-					<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_id' => 'main-menu' ) ); ?>
-
-<!--
-				<li>
-					<div class="user-view">
-						<div class="background">
-							<img src="images/office.jpg">
-						</div>
-						<a href="#user"><img class="circle" src="images/yuna.jpg"></a>
-						<a href="#name"><span class="white-text name">John Doe</span></a>
-						<a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-					</div>
-				</li>
-				<li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-				<li><a href="#!">Second Link</a></li>
-				<li><div class="divider"></div></li>
-				<li><a class="subheader">Subheader</a></li>
-				<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
--->
+				<li class="description"><?php echo $menu_description; ?></li>
+				<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_id' => 'main-menu' ) ); ?>
 			</ul>
 			<a href="#" data-target="slide-out" class="sidenav-trigger">
 				<i class="fas fa-3x fa-bars"><div class="hidden-content">Menu</div></i>

@@ -93,7 +93,6 @@ Options All -Indexes
 #    header always set Strict-Transport-Security "max-age=15768000"
     header always set Referrer-Policy "no-referrer-when-downgrade"
     header always set Feature-Policy "accelerometer 'none'; ambient-light-sensor 'none'; gyroscope 'none'; microphone 'none'; speaker 'none'; usb 'none'; vr 'none';"
-    header always set FireCask "Manchester 0161 222 8655"
 </IfModule>
 
 # Block user enum

@@ -2,6 +2,7 @@
 	function navMenus() {
 		register_nav_menu('main-menu',__('Main Menu'));
 		register_nav_menu('footer-menu',__('Footer Menu'));
+		register_nav_menu('footer-tiny-menu',__('Footer Tiny Menu'));
 	}
 	add_action('init', 'navMenus');
 
@@ -12,3 +13,15 @@
 		return $classes;
 	}
 	add_filter('nav_menu_css_class' , 'navCurrent' , 10 , 2);
+
+
+	function clear_nav_menu_item_id($id, $item, $args) {
+		return "";
+	}
+	add_filter('nav_menu_item_id', 'clear_nav_menu_item_id', 10, 3);
+
+
+	function clear_nav_menu_item_class($classes, $item, $args) {
+		return array();
+	}
+	add_filter('nav_menu_css_class', 'clear_nav_menu_item_class', 10, 3);

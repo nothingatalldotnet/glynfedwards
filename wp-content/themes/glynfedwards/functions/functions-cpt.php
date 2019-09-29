@@ -29,7 +29,7 @@
                 'public' => true,
                 'has_archive' => true,
                 'query_var' => true,
-                'supports' => array('title','revisions'),
+                'supports' => array('title','revisions','author', 'editor', 'thumbnail'),
                 'rewrite' => array(
                     'slug'  => 'news',
                     'pages' => true,
@@ -50,9 +50,9 @@
                 'public' => true,
                 'has_archive' => true,
                 'query_var' => true,
-                'supports' => array('title','revisions'),
+                'supports' => array('title','revisions','author', 'editor'),
                 'rewrite' => array(
-                    'slug'  => 'events',
+                    'slug'  => 'testimonials',
                     'pages' => true,
                     'with_front' => true
                 ),
@@ -71,7 +71,7 @@
                 'public' => true,
                 'has_archive' => true,
                 'query_var' => true,
-                'supports' => array('title','revisions'),
+                'supports' => array('title','revisions','author', 'editor'),
                 'rewrite' => array(
                     'slug'  => 'events',
                     'pages' => true,
@@ -92,7 +92,7 @@
                 'public' => true,
                 'has_archive' => true,
                 'query_var' => true,
-                'supports' => array('title','revisions'),
+                'supports' => array('title','revisions','author', 'editor'),
                 'rewrite' => array(
                     'slug'  => 'scrapbook',
                     'pages' => true,

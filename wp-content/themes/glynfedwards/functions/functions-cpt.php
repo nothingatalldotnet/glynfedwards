@@ -29,7 +29,7 @@
                 'public' => true,
                 'has_archive' => true,
                 'query_var' => true,
-                'supports' => array('title','revisions','author', 'editor', 'thumbnail'),
+                'supports' => array('title','revisions','author', 'editor', 'thumbnail', 'excerpt'),
                 'rewrite' => array(
                     'slug'  => 'news',
                     'pages' => true,

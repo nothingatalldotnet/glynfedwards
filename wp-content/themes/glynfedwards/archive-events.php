@@ -2,7 +2,7 @@
 	get_header();
 ?>
 	<div class="content">
-		<h2>News</h2>
+		<h2>Events</h2>
 <?php
 	if(have_posts()) {
 		while (have_posts()) {

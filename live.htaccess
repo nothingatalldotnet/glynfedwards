@@ -129,21 +129,3 @@ Options All -Indexes
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule . /index.php [L]
 </IfModule>
-
-# Hide login
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteRule ^anexys-login/?$ /wp-login.php?hjkds4fwDFSDSF99UYtttbh [R,L]
-    RewriteCond %{HTTP_COOKIE} !^.*wordpress_logged_in_.*$
-    RewriteCond %{SCRIPT_FILENAME} !^(.*)admin-ajax\.php
-    RewriteCond %{HTTP_REFERER} !^(.*)/wp-admin
-    RewriteCond %{HTTP_REFERER} !^(.*)/wp-login\.php
-    RewriteCond %{QUERY_STRING} !^hjkds4fwDFSDSF99UYtttbh
-    RewriteCond %{QUERY_STRING} !^action=logout
-    RewriteCond %{QUERY_STRING} !^action=rp
-    RewriteCond %{QUERY_STRING} !^action=postpass
-    RewriteCond %{HTTP_COOKIE} !^.*wordpress_logged_in_.*$
-    RewriteRule ^.*wp-admin/?|^.*wp-login\.php /not_found [R,L]
-    RewriteCond %{QUERY_STRING} ^loggedout=true
-    RewriteRule ^.*$ /wp-login.php?hjkds4fwDFSDSF99UYtttbh [R,L]
-</IfModule>

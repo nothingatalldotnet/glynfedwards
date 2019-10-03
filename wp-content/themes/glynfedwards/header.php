@@ -13,7 +13,7 @@
 		<header>
 			<nav class="fixed-nav-bar">
 				<div id="menu" class="menu">
-					<a class="logo" href="">
+					<a class="logo" href="https://www.glynedwardspoet.co.uk/new">
 						<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.png'; ?>" class="site-logo">
 					</a>
 					<div class="menus">

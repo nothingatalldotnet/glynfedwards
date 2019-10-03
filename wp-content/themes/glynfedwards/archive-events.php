@@ -20,24 +20,6 @@
 			<h3><?php echo $this_title; ?></h3>
 			<div><?php echo $this_excerpt; ?></div>
 			<a href="<?php echo $this_url; ?>">Read More</a>
-			<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "NewsArticle",
-				"mainEntityOfPage": {
-					"@type": "WebPage",
-					"@id": "<?php echo $this_url; ?>"
-				},
-				"headline": "<?php echo $this_title; ?>",
-				"datePublished": "<?php echo $this_published; ?>",
-				"dateModified": "<?php echo $this_modified; ?>",
-				"author": {
-					"@type": "Person",
-					"name": "<?php echo $this_author; ?>"
-				},
-				"description": "<?php echo $this_excerpt; ?>"
-			}
-			</script>
 		</article>
 
 <?php

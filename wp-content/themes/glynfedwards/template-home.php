@@ -11,9 +11,10 @@
 ?>
 
 <div class="content">
-	<img class="banner" src="<?php echo wp_get_attachment_image($home_image, 'full'); ?>">
-	<h2><?php echo $home_title; ?></h2>
-	<div><?php echo $home_text; ?></div>
+	<img class="banner" src="<?php echo wp_get_attachment_image($home_image, 'full'); ?>" >
+	<div class="article-wrapper">
+		<h2><?php echo $home_title; ?></h2>
+		<div><?php echo $home_text; ?></div>
 <?php
 	if($home_ctas) {
 		echo "<div class='ctas'>";
@@ -27,6 +28,7 @@
 		wp_reset_postdata();
 	}
 ?>
+	</div>
 </div>
 
 <?php

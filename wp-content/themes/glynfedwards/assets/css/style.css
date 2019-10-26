@@ -1,5 +1,13 @@
-html, body {
+html, body, p, h1, h2, h3, h4, a {
 	font-family: 'Montserrat', sans-serif;
+}
+
+a {
+	color: #000;
+}
+
+a:hover {
+	color: #94000F;
 }
 
 /***************************
@@ -98,8 +106,12 @@ header {
 
 .content h2 {
 	font-size: 30px;
+	font-weight: 400;
 	border-bottom: 1px solid #000000;
 	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 24px;
+    width: 80%;
 }
 
 .content .banner {
@@ -136,13 +148,42 @@ header {
 }
 
 
+.article-wrapper {
+}
+
+.article-wrapper article {
+	display: flex;
+	margin: 0 auto;
+	width: 80%;
+	padding: 24px 0;
+}
+
+	.article-wrapper article:not(:last-child) {
+		border-bottom: 1px solid #000000;
+	}
+
+.article-wrapper article img{
+  margin: 0 30px 0 0;
+  width: 200px;
+  object-fit: contain;
+  align-self: flex-start;
+}
+
+.article-wrapper article div {
+  flex: 1 1 auto;
+}
+
+.article-wrapper article div h3 {
+	font-weight: 500;
+}
+
 
 
 /***************************
 * FOOTER STYLES
 ***************************/
 footer {
-	margin: 24px auto;
+	margin: 0 auto 24px auto;
     width: 80%;
 }
 

@@ -18,7 +18,6 @@
 					</a>
 					<div class="menus">
 						<ul class="social menu-items">
-							<li><a href="">Login</a></li>
 							<li><i class="fab fa-facebook-f"></i></li>
 							<li><i class="fab fa-twitter"></i></li>
 							<li><i class="fab fa-instagram"></i></li>

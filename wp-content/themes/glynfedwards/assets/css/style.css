@@ -1,9 +1,17 @@
-html, body, p, h1, h2, h3, h4, a {
+html, body, p, h1, h2, h3, h4, a, span {
 	font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+	padding: 0;
 }
 
 a {
 	color: #000;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
 }
 
 a:hover {
@@ -158,18 +166,45 @@ header {
 	padding: 24px 0;
 }
 
-	.article-wrapper article:not(:last-child) {
+	.article-wrapper article:not(:last-child),
+	article.testimonial:not(:last-child) {
 		border-bottom: 1px solid #000000;
 	}
 
+.article-wrapper article div.date {
+	align-self: flex-start;
+	position: relative;
+	padding: 45px 5px 0px;
+}
+	.date .day {
+		font-size: 45px;
+		line-height: 45px;
+		position: absolute;
+		left: 5px;
+		top: 0px;
+	}
+	.date .month {
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+	.date .year {
+		display: block;
+		position: absolute;
+		right: -5px;
+		top: 15px;
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		font-weight: 500;
+	}
+
 .article-wrapper article img{
-  margin: 0 30px 0 0;
-  width: 200px;
+  margin: 0 30px;
+  width: 263px;
   object-fit: contain;
-  align-self: flex-start;
+  flex: 1 1 auto;
 }
 
-.article-wrapper article div {
+.article-wrapper article div.info {
   flex: 1 1 auto;
 }
 
@@ -177,7 +212,67 @@ header {
 	font-weight: 500;
 }
 
+article .single {
+	width: 100%;
+}
 
+article .testimonial {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.article-content {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.information, .single-items {
+	text-align: center;
+}
+
+.social.single-items {
+	list-style: none;
+}
+
+.social.single-items li {
+	display: inline-block;
+}
+
+.social.single-items li:not(:first-child) {
+	margin-left: 10px;
+}
+
+.social.single-items li:not(:last-child) {
+	margin-right: 10px;
+}
+
+
+.social.single-items a {
+	text-decoration: none;
+}
+
+/***************************
+* PAGINATION STYLES
+***************************/
+.navigation {
+	text-align: center;
+}
+
+.navigation li a, .navigation li a:hover, .navigation li.active a, .navigation li.disabled {
+    text-decoration:none;
+}
+ 
+.navigation li {
+    display: inline;
+}
+ 
+.navigation li a, .navigation li a:hover, .navigation li.active a, .navigation li.disabled {
+    cursor: pointer;
+    padding: 12px;
+    padding: 0.75rem;
+}
 
 /***************************
 * FOOTER STYLES

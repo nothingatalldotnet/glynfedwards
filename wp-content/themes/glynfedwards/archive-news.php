@@ -19,8 +19,13 @@
 			$this_author = get_the_author_meta('display_name');
 ?>
 			<article>
+				<div class="date">
+					<span class="day">16</span> 
+					<span class="month">August</span> 
+					<span class="year">2013</span>
+				</div>
 				<img src="<?php echo $this_img; ?>" alt="<?php echo $this_title; ?>">
-				<div>
+				<div class="info">
 					<h3><?php echo $this_title; ?></h3>
 					<p><?php echo $this_excerpt; ?></p>
 					<p><a href="<?php echo $this_url; ?>">Read More</a></p>
@@ -47,6 +52,7 @@
 <?php
 		}
 	}
+	archivePagination();
 ?>
 		</div>
 <?php

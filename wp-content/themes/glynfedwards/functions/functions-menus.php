@@ -6,8 +6,8 @@
 	}
 	add_action('init', 'navMenus');
 
-	function navCurrent ($classes, $item) {
-		if (in_array('current-page-ancestor', $classes) || in_array('current-menu-item', $classes) ) {
+	function navCurrent($classes, $item) {
+		if(in_array('current-page-ancestor', $classes) || in_array('current-menu-item', $classes) ) {
 			$classes[] = 'active ';
 		}
 		return $classes;
@@ -19,9 +19,3 @@
 		return "";
 	}
 	add_filter('nav_menu_item_id', 'clear_nav_menu_item_id', 10, 3);
-
-
-	function clear_nav_menu_item_class($classes, $item, $args) {
-		return array();
-	}
-	add_filter('nav_menu_css_class', 'clear_nav_menu_item_class', 10, 3);

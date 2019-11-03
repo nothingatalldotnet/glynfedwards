@@ -20,9 +20,9 @@
         },
         {
             "key": "field_5d964183c7b61",
-            "label": "Date and Time",
+            "label": "Date",
             "name": "event_date",
-            "type": "date_time_picker",
+            "type": "date_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -31,8 +31,8 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "d j Y H:i:s",
-            "return_format": "d j Y H:i:s",
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
             "first_day": 1
         },
         {
@@ -205,5 +205,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1570128492
+    "modified": 1572791117
 }

@@ -18,10 +18,26 @@
 					</a>
 					<div class="menus">
 						<ul class="social menu-items">
-							<li><i class="fab fa-facebook-f"></i></li>
-							<li><i class="fab fa-twitter"></i></li>
-							<li><i class="fab fa-instagram"></i></li>
-							<li><i class="far fa-envelope"></i></li>
+<?php
+	if(get_field('social_facebook', 'option')) {
+		echo '<li><a href="'.get_field('social_facebook', 'option').'"><i class="fab fa-facebook-f fa-lg"></i></a></li>';
+	}
+	if(get_field('social_twitter', 'option')) {
+		echo '<li><a href="'.get_field('social_twitter', 'option').'"><i class="fab fa-twitter fa-lg"></i></a></li>';		
+	}
+	if(get_field('social_instagram', 'option')) {
+		echo '<li><a href="'.get_field('social_instagram', 'option').'"><i class="fab fa-instagram fa-lg"></i></a></li>';
+	}
+	if(get_field('social_youtube', 'option')) {
+		echo '<li><a href="'.get_field('social_youtube', 'option').'"><i class="fab fa-youtube fa-lg"></i></a></li>';
+	}
+	if(get_field('social_linkedin', 'option')) {
+		echo '<li><a href="'.get_field('social_linkedin', 'option').'"><i class="fab fa-linkedin fa-lg"></i></a></li>';
+	}
+	if(get_field('social_email', 'option')) {
+		echo '<li><a href="'.get_field('social_email', 'option').'"><i class="far fa-envelope fa-lg"></i></a></li>';
+	}
+?>
 						</ul>
 						<?php
 							wp_nav_menu(array('theme_location' => 'main-menu', 'menu_id' => 'nav', 'menu_class' => 'menu-items', 'container' => ''));

@@ -12,7 +12,9 @@
 			$this_title = get_the_title();
 			$this_url = get_the_permalink();
 			$this_excerpt = get_the_excerpt();
-			$this_date = get_the_date();
+			$this_date_day = get_the_date('j');
+			$this_date_month = get_the_date('F');
+			$this_date_year = get_the_date('Y');
 			$this_img = get_the_post_thumbnail_url($this_id, 'article-thumbnail');
 			$this_published = get_the_date();
 			$this_modified = get_the_modified_date();
@@ -20,9 +22,9 @@
 ?>
 			<article>
 				<div class="date">
-					<span class="day">16</span> 
-					<span class="month">August</span> 
-					<span class="year">2013</span>
+					<span class="day"><?php echo $this_date_day; ?></span> 
+					<span class="month"><?php echo $this_date_month; ?></span> 
+					<span class="year"><?php echo $this_date_year; ?></span>
 				</div>
 				<img src="<?php echo $this_img; ?>" alt="<?php echo $this_title; ?>">
 				<div class="info">

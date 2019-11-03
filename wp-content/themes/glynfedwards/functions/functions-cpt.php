@@ -71,7 +71,7 @@
                 'public' => true,
                 'has_archive' => true,
                 'query_var' => true,
-                'supports' => array('title','revisions','author', 'editor'),
+                'supports' => array('title','revisions','author', 'editor', 'thumbnail', 'excerpt'),
                 'rewrite' => array(
                     'slug'  => 'events',
                     'pages' => true,

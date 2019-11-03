@@ -18,6 +18,10 @@ a:hover {
 	color: #94000F;
 }
 
+li.active a {
+	color: #94000F;
+}
+
 /***************************
 * HEADER STYLES
 ***************************/
@@ -71,15 +75,8 @@ header {
 }
 
 
-	header .menu a {
-  		color: #000;
-	}
-	header .menu a:hover, .menu a:target {
+	header .menu .social a {
   		color: #94000F;
-	}
-
-	header.menu .social a {
-		color: #94000F;
 	}
 	header .menu .social a:hover, .menu .social a:target {
   		color: #000;
@@ -114,12 +111,16 @@ header {
 
 .content h2 {
 	font-size: 30px;
-	font-weight: 400;
+	font-weight: 500;
 	border-bottom: 1px solid #000000;
 	text-align: center;
 	margin: 0 auto;
 	padding-bottom: 24px;
     width: 80%;
+}
+
+.content .soon {
+	text-align: center;
 }
 
 .content .banner {
@@ -150,9 +151,22 @@ header {
 	border-bottom: none;
 }
 
-.testimonial h4 {
+.testimonial h3 {
 	font-weight: normal;
 	font-size: 20px;
+	quotes: "“" "”";
+}
+
+.testimonial h3:before {
+    content: open-quote;
+}
+
+.testimonial h3:after {
+    content: close-quote;
+}
+
+.testimonial p {
+	   font-size: 20px;
 }
 
 
@@ -199,7 +213,7 @@ header {
 
 .article-wrapper article img{
   margin: 0 30px;
-  width: 263px;
+  max-width: 263px;
   object-fit: contain;
   flex: 1 1 auto;
 }

@@ -22,7 +22,7 @@
 			</div>
 <?php
 	if(get_field('news_social_links')) {
-		echo '<ul class="social single-items">';
+		echo '<ul class="social social-items">';
 		echo '<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>';
 		echo '<li><a href="#"><i class="fab fa-twitter"></i></a></li>';
 		echo '<li><a href="#"><i class="fab fa-instagram"></i></a></li>';

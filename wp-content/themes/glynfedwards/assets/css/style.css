@@ -119,6 +119,12 @@ header {
     width: 80%;
 }
 
+.content .bang {
+	font-size: 22px;
+    text-align: center;
+    line-height: 32px;
+}
+
 .content .soon {
 	text-align: center;
 }
@@ -169,6 +175,33 @@ header {
 	   font-size: 20px;
 }
 
+.event .flex-grid {
+	display: flex;
+	padding-top: 24px;
+}
+
+.event .col {
+	flex: 1;
+}
+	.event .col.details {
+		margin-left: 24px;
+	}
+
+	.event .col ul{
+		list-style: none;
+	}
+
+	.event .col .social.single-items {
+		text-align: auto !important;
+	}
+
+.scrap {
+	text-align: center;
+}
+
+	.scrap img {
+		max-width: 100%;
+	}
 
 .article-wrapper {
 }

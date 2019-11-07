@@ -186,6 +186,41 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5dc48a5013e88",
+            "label": "Social",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5dc48a2ddfe45",
+            "label": "Social Links",
+            "name": "event_social_links",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -205,5 +240,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572791117
+    "modified": 1573161723
 }

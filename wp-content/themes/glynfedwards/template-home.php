@@ -20,17 +20,13 @@
 	if($home_ctas) {
 		echo "<div class='ctas'>";
 		foreach($home_ctas as $cta) {
-			setup_postdata($cta);
-			$cta_permalink = get_the_permalink();
-			$cta_title = get_the_title();
-			echo "<div class='cta'><span>".$cta_title."</span></div>";
+			$cta_permalink = get_the_permalink($cta);
+			$cta_title = get_the_title($cta);
+			echo "<div class='cta'><a href='".$cta_permalink."'><span>".$cta_title."</span></a></div>";
 		}
 		echo "</div>";
-		wp_reset_postdata();
 	}
 ?>
 	</div>
-</div>
-
 <?php
 	get_footer();

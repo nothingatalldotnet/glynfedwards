@@ -135,17 +135,54 @@ header {
     max-height: 300px;
 }
 
-.content .ctas {
+.content .ctas, .content .vertebrae {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 }
-	.content .ctas div {
+
+	.content .ctas a {
+		flex: 1 0 21%;
+		text-decoration: none;
+	}
+
+		.content .ctas a div {
+			margin: 5px;
+			height: 100px;
+			background-repeat: no-repeat;
+			background-position: right;
+		}
+
+			.content .ctas a span {
+				position: relative;
+				top: 70px;
+				left: 20px;
+				font-weight: 600;
+				color: #fff;
+			}
+
+			.content .ctas a:hover span {
+				color: #94000F;
+			}
+
+			.content .ctas a span {
+				color: #000;
+				-o-transition:.5s;
+				-ms-transition:.5s;
+				-moz-transition:.5s;
+				-webkit-transition:.5s;
+			}
+
+	.content .vertebrae div {
 		flex: 1 0 21%;
 		margin: 5px;
-		height: 100px;
-		background-color: blue;
+		border-right: 1px solid #000000;
 	}
+
+		.content .vertebrae div:last-child {
+			border-right: none;
+		}
+
 
 .testimonial {
 	text-align: center;
@@ -325,7 +362,7 @@ article .testimonial {
 * FOOTER STYLES
 ***************************/
 footer {
-	margin: 0 auto 24px auto;
+	margin: 24px auto 24px auto;
     width: 80%;
 }
 

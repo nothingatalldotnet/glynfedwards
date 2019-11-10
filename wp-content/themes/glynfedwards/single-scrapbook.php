@@ -9,7 +9,7 @@
 		<h2>Scrapbook</h2>
 		<div class="soon"><?php echo $scrap_title; ?></div>
 		<div class="scrap">
-			<img src="<?php echo $scrap_image[0]; ?>" alt="<?php echo $scrap_title; ?>">
+			<a href=""><img src="<?php echo $scrap_image[0]; ?>" alt="<?php echo $scrap_title; ?>"></a>
 		</div>
 <?php
 	get_footer();

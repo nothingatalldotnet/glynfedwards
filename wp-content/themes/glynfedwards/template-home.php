@@ -22,7 +22,8 @@
 		foreach($home_ctas as $cta) {
 			$cta_permalink = get_the_permalink($cta);
 			$cta_title = get_the_title($cta);
-			echo "<div class='cta'><a href='".$cta_permalink."'><span>".$cta_title."</span></a></div>";
+			$cta_img = get_the_post_thumbnail_url($cta);
+			echo '<a href="'.$cta_permalink.'"><div class="cta" style="background-image:url('.$cta_img.');"><span>'.$cta_title.'</span></div></a>';
 		}
 		echo "</div>";
 	}

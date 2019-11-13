@@ -23,7 +23,7 @@
 	if($vertebrae->have_posts()) {
 		while($vertebrae->have_posts()) {
 			$vertebrae->the_post();
-			$product_id = get_the_ID();
+			$product_id = get_the_id();
 			$product = wc_get_product($product_id);
 			$product_title = $product->get_name();
 			$product_desc = $product->get_short_description();
@@ -36,11 +36,10 @@
 			echo '<h3>'.$product_title.'</h3>';
 			echo '<p>'.$product_desc.'</p>';
 			echo '<p>Price: '.$product_price.'</p>';
-
 			if($product_type == "external") {
 				echo '<a href="'.$product_buy.'" target="_blank" title="'.$product_buy_text.'">'.$product_buy_text.'</a>';
 			} else {
-				echo '<a href="'.$product_buy.'"title="'.$product_buy_text.'">'.$product_buy_text.'</a>';
+				echo '<a href="'.get_site_url().'/basket/?add-to-cart='.$product_id.'" title="'.$product_buy_text.'">'.$product_buy_text.'</a>';
 			}
 			echo '</div>';
 		}

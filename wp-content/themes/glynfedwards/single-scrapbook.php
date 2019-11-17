@@ -7,9 +7,23 @@
 ?>
 	<div class="content">
 		<h2>Scrapbook</h2>
-		<div class="soon"><?php echo $scrap_title; ?></div>
+		<div class="information">
+			<p class="back"><a href="/scrapbook" title="Back to scrapbook">&laquo; Back to scrapbook</a></p>
+			<p><?php echo $scrap_title; ?></p>
+		</div>
 		<div class="scrap">
 			<a href=""><img src="<?php echo $scrap_image[0]; ?>" alt="<?php echo $scrap_title; ?>"></a>
 		</div>
+		<script type=application/ld+json>
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{"@type": "ListItem","position": 1,"item": {"@id": "https://www.glynedwardspoet.co.uk", "name": "Home"}},
+					{"@type": "ListItem","position": 2,"item": {"@id": "https://www.glynedwardspoet.co.uk"/scrapbook, "name": "Scrapbook"}},
+					{"@type": "ListItem","position": 3,"item": {"@id": "<?php echo $scrap_url; ?>", "name": "<?php echo $scrap_title; ?>"}}
+				]
+			}
+		</script>
 <?php
 	get_footer();

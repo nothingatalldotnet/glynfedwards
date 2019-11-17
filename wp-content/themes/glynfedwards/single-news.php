@@ -17,6 +17,7 @@
 		<article class="single">
 			<h2><?php echo $this_title; ?></h2>
 			<div class="information">
+				<p class="back"><a href="/news" title="Back to news">&laquo; Back to news</a></p>
 				<p class="date"><?php echo $this_modified_display; ?></p>
 				<p class="author">Written by <?php echo $this_author; ?></p>
 			</div>
@@ -58,6 +59,17 @@
 				},
 				"description": "<?php echo $this_excerpt; ?>"
 			}
+			</script>
+			<script type=application/ld+json>
+				{
+					"@context": "http://schema.org",
+					"@type": "BreadcrumbList",
+					"itemListElement": [
+						{"@type": "ListItem","position": 1,"item": {"@id": "https://www.glynedwardspoet.co.uk", "name": "Home"}},
+						{"@type": "ListItem","position": 2,"item": {"@id": "https://www.glynedwardspoet.co.uk"/news, "name": "News"}},
+						{"@type": "ListItem","position": 3,"item": {"@id": "<?php echo $this_url; ?>", "name": "<?php echo $this_title; ?>"}}
+					]
+				}
 			</script>
 		</article>
 <?php

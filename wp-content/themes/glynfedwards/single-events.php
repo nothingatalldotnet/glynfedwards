@@ -69,5 +69,16 @@
 				<div class="col"><?php echo $this_description; ?></div>
 			</div>
 		</article>
+		<script type=application/ld+json>
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{"@type": "ListItem","position": 1,"item": {"@id": "https://www.glynedwardspoet.co.uk", "name": "Home"}},
+					{"@type": "ListItem","position": 2,"item": {"@id": "https://www.glynedwardspoet.co.uk"/events, "name": "Events"}},
+					{"@type": "ListItem","position": 3,"item": {"@id": "<?php echo $this_url; ?>", "name": "<?php echo $this_title; ?>"}}
+				]
+			}
+		</script>
 <?php
 	get_footer();

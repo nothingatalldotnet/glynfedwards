@@ -49,4 +49,18 @@
 					</div>
 				</div>
 			</nav>
+			<nav id="drop-menu">
+				<div id="menu-toggle">
+					<input type="checkbox">
+				    <span></span>
+				    <span></span>
+				    <span></span>
+				    <?php wp_nav_menu(array('theme_location' => 'main-menu', 'menu_id' => 'mobile-nav', 'menu_class' => 'menu-items', 'container' => '')); ?>
+				</div>
+			</nav>
+			<div id="mobile-logo">
+				<a class="logo" href="https://www.glynedwardspoet.co.uk/new">
+					<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.png'; ?>" class="site-logo">
+				</a>
+			</div>
 		</header>

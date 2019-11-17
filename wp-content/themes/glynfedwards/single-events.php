@@ -75,7 +75,7 @@
 				"@type": "BreadcrumbList",
 				"itemListElement": [
 					{"@type": "ListItem","position": 1,"item": {"@id": "https://www.glynedwardspoet.co.uk", "name": "Home"}},
-					{"@type": "ListItem","position": 2,"item": {"@id": "https://www.glynedwardspoet.co.uk"/events, "name": "Events"}},
+					{"@type": "ListItem","position": 2,"item": {"@id": "https://www.glynedwardspoet.co.uk/events", "name": "Events"}},
 					{"@type": "ListItem","position": 3,"item": {"@id": "<?php echo $this_url; ?>", "name": "<?php echo $this_title; ?>"}}
 				]
 			}

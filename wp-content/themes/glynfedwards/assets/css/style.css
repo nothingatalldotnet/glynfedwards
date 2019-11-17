@@ -280,7 +280,6 @@ header {
 			}
 
 			.content .ctas a span {
-				color: #000;
 				-o-transition:.5s;
 				-ms-transition:.5s;
 				-moz-transition:.5s;
@@ -364,8 +363,7 @@ header {
 	padding: 24px 0;
 }
 
-	.article-wrapper article:not(:last-child),
-	article.testimonial:not(:last-child) {
+	.article-wrapper article:not(:last-child), article.testimonial:not(:last-child) {
 		border-bottom: 1px solid #000000;
 	}
 
@@ -412,7 +410,9 @@ header {
 
 article .single {
 	width: 100%;
+	padding-top: 24px;
 }
+
 
 article .testimonial {
 	width: 70%;
@@ -421,7 +421,7 @@ article .testimonial {
 }
 
 .article-content {
-	width: 70%;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -451,6 +451,30 @@ article .testimonial {
 	text-decoration: none;
 }
 
+article ul.social.social-items {
+	display: flex;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+article ul.social.social-items li {
+	flex: 1 1 0px;
+	text-align: center
+}
+
+article ul.social.social-items li a {
+	color: #94000F;
+}
+
+article ul.social.social-items li a:hover {
+	color: #000
+}
+
+.article-content img {
+	width: 100%;
+	height: auto;
+}
 
 @media (max-width: 480px) {
 
@@ -549,10 +573,14 @@ article .testimonial {
 		width: 100%;
 		height: auto;
 	}
+
 	.social.single-items a {
 		color: #94000F;
 	}
 
+	article ul.social.social-items {
+		width: 100%;
+	}
 }
 
 

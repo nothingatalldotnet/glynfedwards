@@ -11,8 +11,7 @@
 		$query->the_post();
 		$scrap_title = get_the_title();
 		$scrap_url = get_the_permalink();
-		$scrap_image = get_field('scrap_image');
-		$scrap_image = wp_get_attachment_image_src($scrap_image, 'full');
+		$scrap_type = get_field('type');
 	}
 ?>
 	<div class="content">
@@ -21,7 +20,21 @@
 			<p>Random: <a href="<?php echo $scrap_url; ?>"><?php echo $scrap_title; ?></a></p>
 		</div>
 		<div class="scrap">
-			<img src="<?php echo $scrap_image[0]; ?>" alt="<?php echo $scrap_title; ?>">
+<?php
+	if($scrap_type == "img") {
+		$scrap_image = get_field('scrap_image');
+		$scrap_image = wp_get_attachment_image_src($scrap_image, 'full');
+		echo '<img src="'.$scrap_image[0].'" alt="'.$scrap_title.'">';
+	} else if($scrap_type == "fbv") {
+		$scrap_facebook = get_field('scrap_facebook');
+		echo '<div class="fb-video" data-href="'.$scrap_facebook.'"  data-allowfullscreen="true" data-width="500"></div>';
+	} else if($scrap_type == "poe") {
+	} else {
+		$scrap_image = get_field('scrap_image');
+		$scrap_image = wp_get_attachment_image_src($scrap_image, 'full');
+		echo '<img src="'.$scrap_image[0].'" alt="'.$scrap_title.'">';
+	}
+?>
 		</div>
 		<script type=application/ld+json>
 			{
@@ -29,7 +42,7 @@
 				"@type": "BreadcrumbList",
 				"itemListElement": [
 					{"@type": "ListItem","position": 1,"item": {"@id": "https://www.glynedwardspoet.co.uk", "name": "Home"}},
-					{"@type": "ListItem","position": 2,"item": {"@id": "https://www.glynedwardspoet.co.uk"/scrapbook, "name": "Scrapbook"}}
+					{"@type": "ListItem","position": 2,"item": {"@id": "https://www.glynedwardspoet.co.uk"/scrapbook", "name": "Scrapbook"}}
 				]
 			}
 		</script>

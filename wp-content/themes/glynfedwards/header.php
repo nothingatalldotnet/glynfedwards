@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-	<head profile="http://gmpg.org/xfn/11">
+	<head>
 		<?php wp_head(); ?>
 		<meta name="theme-color" content="#ffffff">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -18,7 +18,7 @@
 			<nav class="fixed-nav-bar">
 				<div id="menu" class="menu">
 					<a class="logo" href="https://www.glynedwardspoet.co.uk/new">
-						<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.png'; ?>" class="site-logo">
+						<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.png'; ?>" class="site-logo" alt="Glyn Edwards Logo">
 					</a>
 					<div class="menus">
 						<ul class="social menu-items">
@@ -60,7 +60,7 @@
 			</nav>
 			<div id="mobile-logo">
 				<a class="logo" href="https://www.glynedwardspoet.co.uk/new">
-					<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.png'; ?>" class="site-logo">
+					<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.png'; ?>" class="site-logo" alt="Glyn Edwards Logo">
 				</a>
 			</div>
 		</header>

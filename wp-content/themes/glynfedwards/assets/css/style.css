@@ -44,6 +44,11 @@ header {
     	padding: 24px 18px;
 	}
 
+/*
+	.admin-bar .fixed-nav-bar{
+		top: 32px;
+	}
+*/
 	header .logo {
 	    display: inline-block;
 	    vertical-align: top;
@@ -105,7 +110,7 @@ header {
 	}
 
 
-@media (max-width: 480px) {
+@media (max-width: 880px) {
 
 	.fixed-nav-bar {
 		display: none;
@@ -117,6 +122,7 @@ header {
 
 	#mobile-logo {
 		display: block;
+		box-shadow: 0px 3px 6px #00000029;
 	}
 
 
@@ -229,6 +235,7 @@ header {
 	border-bottom: 1px solid #000000;
 	text-align: center;
 	margin: 0 auto;
+	padding-top: 24px;
 	padding-bottom: 24px;
     width: 80%;
 }
@@ -246,6 +253,7 @@ header {
 .content .banner {
     width: 100%;
     height: auto;
+    margin-top: 24px;
     max-height: 300px;
 }
 
@@ -253,11 +261,15 @@ header {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
 }
 
 	.content .ctas a {
-		flex: 1 0 21%;
 		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		flex: 1;
 	}
 
 		.content .ctas a div {
@@ -354,6 +366,9 @@ header {
 	}
 
 .article-wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
 }
 
 .article-wrapper article {
@@ -421,7 +436,7 @@ article .testimonial {
 }
 
 .article-content {
-	width: 100%;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -476,7 +491,55 @@ article ul.social.social-items li a:hover {
 	height: auto;
 }
 
-@media (max-width: 480px) {
+
+.article-wrapper.contact {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.article-wrapper.contact div.col {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+}
+
+
+.wpcf7 {
+}
+
+.wpcf7-form {
+}
+
+.wpcf7-textarea, .wpcf7-text {
+	width: 90%;
+	border: 1px solid #000;
+}
+
+.wpcf7-submit {
+	font-family: 'Montserrat', sans-serif;
+	color: #94000F;
+}
+
+.wpcf7-response-output {
+	margin: 0 !important;
+	width: 85%;
+}
+
+@media (max-width: 880px) {
+	.wpcf7-textarea, .wpcf7-text {
+		width: 100%;
+		border: 1px solid #000;
+	}
+
+	.article-wrapper.contact {
+		flex-direction: column-reverse;
+	}
+
+}
+
+@media (max-width: 880px) {
 
 	.content {
 		width: 90%;
@@ -498,17 +561,21 @@ article ul.social.social-items li a:hover {
 	}
 
 	.content .ctas {
-		display: block;
+		flex-direction: column-reverse;
 	}
 
     .content .ctas a {
-    	flex: none;
     }
 
     .content .ctas a div {
     	background: 72%;
     	margin: 20px 5px 0 5px;
+    	background-position: -132px -35px;
     }
+
+	.content .ctas a span {
+		top: 24px;
+	}
 
 	.content .bang {
     	font-size: 18px;
@@ -646,7 +713,7 @@ footer ul {
 	color: #94000F;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 880px) {
 	footer {
 		width: 100%;
 	}

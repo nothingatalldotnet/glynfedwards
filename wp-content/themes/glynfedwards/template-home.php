@@ -12,9 +12,9 @@
 ?>
 
 <div class="content">
-	<img class="banner" src="<?php echo $home_image[0]; ?>">
+	<h2><?php echo $home_title; ?></h2>
 	<div class="article-wrapper">
-		<h2><?php echo $home_title; ?></h2>
+		<img class="banner" src="<?php echo $home_image[0]; ?>">	
 		<div class="bang"><?php echo $home_text; ?></div>
 <?php
 	if($home_ctas) {
@@ -29,14 +29,14 @@
 	}
 ?>
 	</div>
-		<script type=application/ld+json>
-			{
-				"@context": "http://schema.org",
-				"@type": "BreadcrumbList",
-				"itemListElement": [
-					{"@type": "ListItem","position": 1,"item": {"@id": "https://www.glynedwardspoet.co.uk", "name": "Home"}}
-				]
-			}
-		</script>
+	<script type=application/ld+json>
+		{
+			"@context": "http://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{"@type": "ListItem","position": 1,"item": {"@id": "https://www.glynedwardspoet.co.uk", "name": "Home"}}
+			]
+		}
+	</script>
 <?php
 	get_footer();

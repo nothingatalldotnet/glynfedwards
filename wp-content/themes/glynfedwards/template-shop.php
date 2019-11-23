@@ -7,8 +7,8 @@
 	global $product;
 ?>
 	<div class="content">
+		<h2>Shop</h2>
 		<div class="article-wrapper">
-			<h2>Shop</h2>
 			<?php echo the_content(); ?>
 			<div class="vertebrae">
 <?php
@@ -39,7 +39,8 @@
 			if($product_type == "external") {
 				echo '<a href="'.$product_buy.'" target="_blank" title="'.$product_buy_text.'">'.$product_buy_text.'</a>';
 			} else {
-				echo '<a href="'.get_site_url().'/basket/?add-to-cart='.$product_id.'" title="'.$product_buy_text.'">'.$product_buy_text.'</a>';
+				echo "Coming soon!";
+//echo '<a href="'.get_site_url().'/basket/?add-to-cart='.$product_id.'" title="'.$product_buy_text.'">'.$product_buy_text.'</a>';
 			}
 			echo '</div>';
 		}
@@ -53,7 +54,7 @@
 				"@type": "BreadcrumbList",
 				"itemListElement": [
 					{"@type": "ListItem","position": 1,"item": {"@id": "https://www.glynedwardspoet.co.uk", "name": "Home"}},
-					{"@type": "ListItem","position": 2,"item": {"@id": "https://www.glynedwardspoet.co.uk"/shop", "name": "Shop"}}
+					{"@type": "ListItem","position": 2,"item": {"@id": "https://www.glynedwardspoet.co.uk/shop", "name": "Shop"}}
 				]
 			}
 		</script>

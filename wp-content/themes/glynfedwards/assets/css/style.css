@@ -2,6 +2,13 @@ html, body, p, h1, h2, h3, h4, a, span {
 	font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+	display: inline !important;
+}
+
+/***************************
+* SOME GENERALS
+***************************/
 ul {
 	padding: 0;
 	list-style-type: none;
@@ -21,6 +28,24 @@ a:hover {
 
 li.active a {
 	color: #94000F;
+}
+
+body:not(.page-template-template-contact) .grecaptcha-badge {
+	display: none;
+}
+
+.acf-map {
+	width: 100%;
+	height: 400px;
+	margin: 20px 0;
+}
+
+.acf-map img {
+	max-width: inherit !important;
+}
+
+video {
+	max-width: 100%;
 }
 
 /***************************
@@ -192,8 +217,9 @@ header {
 		width: 100%;
 		margin: -100px 0 0 0;
 		padding: 45px;
-		padding-top: 45px;
-		background: #ededed;
+		padding-top: 75px;
+		background: #000;
+		color: #fff;
 		list-style-type: none;
 		-webkit-font-smoothing: antialiased;
 		transform-origin: 0% 0%;
@@ -201,8 +227,16 @@ header {
 		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 	}
 
+	#mobile-nav a {
+		color: #fff;
+	}
+
+	#mobile-nav a:hover {
+		color: #94000F;
+	}
+
 	#mobile-nav li {
-		padding: 10px 0;
+		padding: 12px 0;
 		font-size: 22px;
 	}
 
@@ -299,7 +333,10 @@ header {
 			}
 
 	.content .vertebrae div {
-		flex: 1 0 21%;
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		flex: 1;
 		margin: 5px;
 		border-right: 1px solid #000000;
 	}
@@ -339,11 +376,10 @@ header {
 
 .event .flex-grid {
 	display: flex;
-	padding-top: 24px;
 }
 
-.event .col {
-	flex: 1;
+.event .col1 {
+	flex: 30%;
 }
 	.event .col.details {
 		margin-left: 24px;
@@ -353,9 +389,14 @@ header {
 		list-style: none;
 	}
 
-	.event .col .social.single-items {
-		text-align: auto !important;
+	.event .col2 .social.single-items {
+		text-align: left;
 	}
+
+.event .col2 {
+	flex: 50%;
+}
+
 
 .scrap {
 	text-align: center;
@@ -537,6 +578,14 @@ article ul.social.social-items li a:hover {
 		flex-direction: column-reverse;
 	}
 
+	.event .flex-grid ul, .event .col2 .social.single-items, .event .col1 img {
+    	text-align: center;
+	}
+
+	.event .col1 img {
+		width: 100%;
+	}
+
 }
 
 @media (max-width: 880px) {
@@ -560,7 +609,7 @@ article ul.social.social-items li a:hover {
 		flex: 1 0 auto;
 	}
 
-	.content .ctas {
+	.content .ctas, .event .flex-grid {
 		flex-direction: column-reverse;
 	}
 
@@ -647,6 +696,15 @@ article ul.social.social-items li a:hover {
 
 	article ul.social.social-items {
 		width: 100%;
+	}
+
+	.content .vertebrae {
+		display: block;
+	}
+
+	.content .vertebrae div {
+		border-right: none;
+		text-align: center;
 	}
 }
 

@@ -27,8 +27,25 @@
 		echo '<img src="'.$scrap_image[0].'" alt="'.$scrap_title.'">';
 	} else if($scrap_type == "fbv") {
 		$scrap_facebook = get_field('scrap_facebook');
-		echo '<div class="fb-video" data-href="'.$scrap_facebook.'"  data-allowfullscreen="true" data-width="500"></div>';
+		preg_match('/src="(.+?)"/', $scrap_facebook, $matches);
+		$src = $matches[1];
+		$params = array(
+			'controls' => 0,
+			'hd' => 1,
+			'autohide' => 1
+		);
+		$new_src = add_query_arg($params, $src);
+		$scrap_facebook = str_replace($src, $new_src, $scrap_facebook);
+		$attributes = 'frameborder="0"';
+		$scrap_facebook = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $scrap_facebook);
+		echo $scrap_facebook;
 	} else if($scrap_type == "poe") {
+	} else if($scrap_type == "vid") {
+		$scrap_vid = get_field('scrap_video');
+		echo '<video controls>';
+		echo '<source src="'.$scrap_vid.'" type="video/mp4">';
+		echo "Your browser does not support the video tag.";
+		echo "</video>";
 	} else {
 		$scrap_image = get_field('scrap_image');
 		$scrap_image = wp_get_attachment_image_src($scrap_image, 'full');

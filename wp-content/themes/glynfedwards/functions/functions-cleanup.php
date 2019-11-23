@@ -9,11 +9,11 @@
   	remove_action('wp_head', 'feed_links_extra', 3);
   	remove_action('wp_head', 'wp_generator');
 	remove_action('wp_head', 'wp_shortlink_wp_head');
-	remove_action('wp_head', 'rest_output_link_wp_head', 10);
+//	remove_action('wp_head', 'rest_output_link_wp_head', 10);
 	remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
   	remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 	remove_action('template_redirect', 'rest_output_link_header', 11, 0);
-	remove_action('rest_api_init', 'create_initial_rest_routes', 99);
+//	remove_action('rest_api_init', 'create_initial_rest_routes', 99);
 
 	/**
 	 * Remove jQuery
@@ -109,6 +109,7 @@
 	 * Update the login logo
 	 */
 	function update_logo() { 
+		
 	}
 	add_action('login_head', 'update_logo');
 

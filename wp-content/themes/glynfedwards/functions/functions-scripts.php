@@ -19,5 +19,8 @@
 	}
 	add_action('admin_head', 'add_admin_style');
 
-
-
+	function remove_script_types($tag, $handle) {
+		return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
+	}
+	add_filter('style_loader_tag', 'remove_script_types', 10, 2);
+	add_filter('script_loader_tag', 'remove_script_types', 10, 2);

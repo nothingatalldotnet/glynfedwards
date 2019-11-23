@@ -15,7 +15,7 @@
 ?>
 	<div class="content">
 		<article class="single">
-			<h2><?php echo $this_title; ?></h2>
+			<h2 class="share-title"><?php echo $this_title; ?></h2>
 			<div class="information">
 				<p class="back"><a href="/news" title="Back to news">&laquo; Back to news</a></p>
 				<p class="date"><?php echo $this_modified_display; ?></p>
@@ -24,23 +24,14 @@
 <?php
 	if(get_field('news_social_links')) {
 		echo '<ul class="social single-items">';
-		echo '<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>';
-		echo '<li><a href="#"><i class="fab fa-twitter"></i></a></li>';
-		echo '<li><a href="#"><i class="fab fa-instagram"></i></a></li>';
-		echo '<li><a href="#"><i class="far fa-envelope"></i></a></li>';
+		echo '<li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>';
+		echo '<li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>';
+		echo '<li><a href="#" class="email"><i class="far fa-envelope"></i></a></li>';
 		echo '</ul>';
 	}
 	echo '<div class="article-content">';
 	echo the_content();
 	echo '</div>';
-	if(get_field('news_social_links')) {
-		echo '<ul class="social single-items">';
-		echo '<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>';
-		echo '<li><a href="#"><i class="fab fa-twitter"></i></a></li>';
-		echo '<li><a href="#"><i class="fab fa-instagram"></i></a></li>';
-		echo '<li><a href="#"><i class="far fa-envelope"></i></a></li>';
-		echo '</ul>';
-	}
 ?>
 			<script type="application/ld+json">
 			{

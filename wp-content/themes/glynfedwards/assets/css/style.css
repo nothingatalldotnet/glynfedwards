@@ -177,7 +177,7 @@ header {
 		display: block;
 		width: 33px;
 		height: 4px;
-		right: -84%;
+		right: -88%;
 		margin-bottom: 5px;
 		position: relative;
 		background: #94000F;
@@ -216,7 +216,6 @@ header {
 		position: absolute;
 		width: 100%;
 		margin: -100px 0 0 0;
-		padding: 45px;
 		padding-top: 75px;
 		background: #000;
 		color: #fff;
@@ -246,6 +245,7 @@ header {
 
 	header .menu-items li {
 		display: block;
+		margin-left: 24px;
 	}
 }
 

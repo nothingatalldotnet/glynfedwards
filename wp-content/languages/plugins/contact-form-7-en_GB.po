@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-11-13 17:32:00+0000\n"
+"PO-Revision-Date: 2020-03-31 11:31:26+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,23 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: en_GB\n"
 "Project-Id-Version: Plugins - Contact Form 7 - Stable (latest release)\n"
+
+#: admin/edit-contact-form.php:197
+msgid "docs"
+msgstr "docs"
+
+#. translators: 1: FAQ, 2: Docs ("FAQ & Docs")
+#: admin/edit-contact-form.php:190
+msgid "%1$s and %2$s"
+msgstr "%1$s and %2$s"
+
+#: admin/includes/editor.php:247
+msgid "Additional settings"
+msgstr "Additional settings"
+
+#: modules/constant-contact.php:466 modules/recaptcha.php:477
+msgid "Error"
+msgstr "Error"
 
 #: includes/config-validator.php:418
 msgid "Unavailable HTML elements are used in the form template."
@@ -161,25 +178,20 @@ msgid "Make this checkbox optional"
 msgstr "Make this checkbox optional"
 
 #: admin/edit-contact-form.php:206
-msgid "Professional Services"
-msgstr "Professional Services"
+msgid "Professional services"
+msgstr "Professional services"
 
 #: admin/edit-contact-form.php:205
 msgid "https://contactform7.com/custom-development/"
 msgstr "https://contactform7.com/custom-development/"
 
 #: admin/edit-contact-form.php:202
-msgid "Support Forums"
-msgstr "Support Forums"
+msgid "Support forums"
+msgstr "Support forums"
 
 #: admin/edit-contact-form.php:201
 msgid "https://wordpress.org/support/plugin/contact-form-7/"
 msgstr "https://wordpress.org/support/plugin/contact-form-7/"
-
-#. translators: 1: FAQ, 2: Docs ("FAQ & Docs")
-#: admin/edit-contact-form.php:190
-msgid "%1$s &#38; %2$s"
-msgstr "%1$s &#38; %2$s"
 
 #: admin/edit-contact-form.php:186
 msgid "Here are some available options to help solve your problems."
@@ -216,8 +228,8 @@ msgid "You can edit messages used in various situations here. For details, see %
 msgstr "You can edit messages used in various situations here. For details, see %s."
 
 #: admin/includes/editor.php:210
-msgid "Editing Messages"
-msgstr "Editing Messages"
+msgid "Editing messages"
+msgstr "Editing messages"
 
 #: admin/includes/editor.php:209
 msgid "https://contactform7.com/editing-messages/"
@@ -232,8 +244,8 @@ msgid "You can edit the form template here. For details, see %s."
 msgstr "You can edit the form template here. For details, see %s."
 
 #: admin/includes/editor.php:56
-msgid "Editing Form Template"
-msgstr "Editing Form Template"
+msgid "Editing form template"
+msgstr "Editing form template"
 
 #: admin/includes/editor.php:55
 msgid "https://contactform7.com/editing-form-template/"
@@ -298,8 +310,8 @@ msgid "You are not allowed to access the requested contact form."
 msgstr "You are not allowed to access the requested contact form."
 
 #: includes/rest-api.php:171 includes/rest-api.php:198
-#: includes/rest-api.php:247 includes/rest-api.php:276
-#: includes/rest-api.php:316
+#: includes/rest-api.php:247 includes/rest-api.php:281
+#: includes/rest-api.php:321
 msgid "The requested contact form was not found."
 msgstr "The requested contact form was not found."
 
@@ -550,10 +562,10 @@ msgstr "Validate Configuration"
 
 #. translators: %s: number of contact forms
 #: admin/includes/config-validator.php:108
-msgid "Validate %s Contact Form Now"
-msgid_plural "Validate %s Contact Forms Now"
-msgstr[0] "Validate %s Contact Form Now"
-msgstr[1] "Validate %s Contact Forms Now"
+msgid "Validate %s contact form now"
+msgid_plural "Validate %s contact forms now"
+msgstr[0] "Validate %s contact form now"
+msgstr[1] "Validate %s contact forms now"
 
 #: admin/includes/config-validator.php:66
 msgid "You are not allowed to validate configuration."
@@ -579,10 +591,6 @@ msgstr "Settings saved."
 #: modules/recaptcha.php:478
 msgid "Invalid key values."
 msgstr "Invalid key values."
-
-#: modules/constant-contact.php:466 modules/recaptcha.php:477
-msgid "ERROR"
-msgstr "ERROR"
 
 #: modules/recaptcha.php:267 admin/includes/welcome-panel.php:36
 msgid "reCAPTCHA"
@@ -639,8 +647,8 @@ msgid "Akismet"
 msgstr "Akismet"
 
 #: modules/text.php:234 modules/textarea.php:141
-msgid "Text Fields"
-msgstr "Text Fields"
+msgid "Text fields"
+msgstr "Text fields"
 
 #: modules/text.php:234 modules/textarea.php:141
 msgid "https://contactform7.com/text-fields/"
@@ -695,8 +703,8 @@ msgid "Label"
 msgstr "Label"
 
 #: modules/submit.php:55
-msgid "Submit Button"
-msgstr "Submit Button"
+msgid "Submit button"
+msgstr "Submit button"
 
 #: modules/submit.php:55
 msgid "https://contactform7.com/submit-button/"
@@ -763,8 +771,8 @@ msgid "Spinbox"
 msgstr "Spinbox"
 
 #: modules/number.php:154
-msgid "Number Fields"
-msgstr "Number Fields"
+msgid "Number fields"
+msgstr "Number fields"
 
 #: modules/number.php:154
 msgid "https://contactform7.com/number-fields/"
@@ -807,8 +815,8 @@ msgid "File size limit (bytes)"
 msgstr "File size limit (bytes)"
 
 #: modules/file.php:195
-msgid "File Uploading and Attachment"
-msgstr "File Uploading and Attachment"
+msgid "File uploading and attachment"
+msgstr "File uploading and attachment"
 
 #: modules/file.php:195
 msgid "https://contactform7.com/file-uploading-and-attachment/"
@@ -862,8 +870,8 @@ msgid "Default value"
 msgstr "Default value"
 
 #: modules/date.php:151
-msgid "Date Field"
-msgstr "Date Field"
+msgid "Date field"
+msgstr "Date field"
 
 #: modules/date.php:151
 msgid "https://contactform7.com/date-field/"
@@ -925,8 +933,8 @@ msgid "Field type"
 msgstr "Field type"
 
 #: modules/select.php:163 modules/checkbox.php:280
-msgid "Checkboxes, Radio Buttons and Menus"
-msgstr "Checkboxes, Radio Buttons and Menus"
+msgid "Checkboxes, radio buttons and menus"
+msgstr "Checkboxes, radio buttons and menus"
 
 #: modules/select.php:163 modules/checkbox.php:280
 msgid "https://contactform7.com/checkboxes-radio-buttons-and-menus/"
@@ -1026,8 +1034,8 @@ msgid "Name"
 msgstr "Name"
 
 #: modules/acceptance.php:243
-msgid "Acceptance Checkbox"
-msgstr "Acceptance Checkbox"
+msgid "Acceptance checkbox"
+msgstr "Acceptance checkbox"
 
 #: modules/acceptance.php:243
 msgid "https://contactform7.com/acceptance-checkbox/"
@@ -1231,8 +1239,8 @@ msgid "https://contactform7.com/additional-settings/"
 msgstr "https://contactform7.com/additional-settings/"
 
 #: admin/includes/editor.php:194
-msgid "File Attachments"
-msgstr "File Attachments"
+msgid "File attachments"
+msgstr "File attachments"
 
 #: admin/includes/editor.php:188
 msgid "Use HTML content type"
@@ -1243,12 +1251,12 @@ msgid "Exclude lines with blank mail-tags from output"
 msgstr "Exclude lines with blank mail-tags from output"
 
 #: admin/includes/editor.php:181
-msgid "Message Body"
-msgstr "Message Body"
+msgid "Message body"
+msgstr "Message body"
 
 #: admin/includes/editor.php:172
-msgid "Additional Headers"
-msgstr "Additional Headers"
+msgid "Additional headers"
+msgstr "Additional headers"
 
 #: includes/contact-form-template.php:40 admin/includes/editor.php:163
 msgid "Subject"
@@ -1316,8 +1324,7 @@ msgstr "Shortcode"
 msgid "Title"
 msgstr "Title"
 
-#: admin/includes/editor.php:247 admin/includes/editor.php:252
-#: admin/edit-contact-form.php:261
+#: admin/includes/editor.php:252 admin/edit-contact-form.php:261
 msgid "Additional Settings"
 msgstr "Additional Settings"
 
@@ -1354,7 +1361,7 @@ msgstr "FAQs"
 msgid "https://contactform7.com/faq/"
 msgstr "https://contactform7.com/faq/"
 
-#: admin/includes/help-tabs.php:92 admin/edit-contact-form.php:197
+#: admin/includes/help-tabs.php:92
 msgid "Docs"
 msgstr "Docs"
 
@@ -1413,8 +1420,8 @@ msgid "https://contactform7.com/spam-filtering-with-akismet/"
 msgstr "https://contactform7.com/spam-filtering-with-akismet/"
 
 #: admin/includes/editor.php:129
-msgid "Setting Up Mail"
-msgstr "Setting Up Mail"
+msgid "Setting up mail"
+msgstr "Setting up mail"
 
 #: admin/includes/editor.php:128
 msgid "https://contactform7.com/setting-up-mail/"

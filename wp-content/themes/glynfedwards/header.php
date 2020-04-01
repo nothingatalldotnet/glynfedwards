@@ -18,7 +18,7 @@
 			<nav class="fixed-nav-bar">
 				<div id="menu" class="menu">
 					<h1>
-						<a class="logo" href="https://www.glynedwardspoet.co.uk/new">
+						<a class="logo" href="https://www.glynedwardspoet.co.uk">
 							<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.png'; ?>" class="site-logo" alt="Glyn Edwards Logo">
 						</a>
 					</h1>
@@ -61,7 +61,7 @@
 				</div>
 			</nav>
 			<div id="mobile-logo">
-				<a class="logo" href="https://www.glynedwardspoet.co.uk/new">
+				<a class="logo" href="https://www.glynedwardspoet.co.uk">
 					<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.png'; ?>" class="site-logo" alt="Glyn Edwards Logo">
 				</a>
 			</div>

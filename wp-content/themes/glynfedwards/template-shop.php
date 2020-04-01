@@ -31,6 +31,7 @@
 			$product_type = $product->get_type();
 			$product_buy = $product->add_to_cart_url();
 			$product_buy_text = $product->add_to_cart_text();
+			$product_stock = $product->get_stock_quantity();
 
 			echo '<div>';
 			echo '<h3>'.$product_title.'</h3>';
@@ -39,8 +40,11 @@
 			if($product_type == "external") {
 				echo '<a href="'.$product_buy.'" target="_blank" title="'.$product_buy_text.'">'.$product_buy_text.'</a>';
 			} else {
-				echo "Coming soon!";
-//echo '<a href="'.get_site_url().'/basket/?add-to-cart='.$product_id.'" title="'.$product_buy_text.'">'.$product_buy_text.'</a>';
+				if($product_stock > 0) {
+					echo '<a href="'.get_site_url().'/checkout/?add-to-cart='.$product_id.'" title="'.$product_buy_text.'">'.$product_buy_text.'</a>';
+				} else {
+					echo "Sorry, out of stock";
+				}
 			}
 			echo '</div>';
 		}
@@ -56,6 +60,35 @@
 					{"@type": "ListItem","position": 1,"item": {"@id": "https://www.glynedwardspoet.co.uk", "name": "Home"}},
 					{"@type": "ListItem","position": 2,"item": {"@id": "https://www.glynedwardspoet.co.uk/shop", "name": "Shop"}}
 				]
+			}
+		</script>
+		<script type="application/ld+json">
+			{
+				"@context":"https://schema.org",
+				"@type":"Book",
+				"name" : "Vertebrae",
+				"isbn": "9781916498754",
+				"author": {
+					"@type":"Person",
+					"name":"Glyn Edwards"
+				},
+				"url" : "https://www.glynedwardspoet.co.uk/shop",
+				"offers": {
+					"@type": "AggregateOffer",
+					"highPrice": "£9.99",
+					"lowPrice": "£9.99",
+					"offerCount": "3",
+					"offers": [{
+						"@type": "Offer",
+						"url": "https://www.glynedwardspoet.co.uk/shop"
+					}, {
+						"@type": "Offer",
+						"url": "https://thelonelycrowd.org/vertebrae-by-glyn-edwards/"
+					}, {
+						"@type": "Offer",
+						"url": "https://www.waterstones.com/book/vertebrae/glyn-edwards/9781916498754"
+					}]
+				}
 			}
 		</script>
 <?php

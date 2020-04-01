@@ -1,36 +1,55 @@
 <?php
+/**
+ * Class for ACF Field support.
+ *
+ * @package WordPress
+ */
+
 // If check class exists.
 if ( ! class_exists( 'ACF_Field_For_Contact_form_7' ) ) {
-	// Declare class
+
+	/**
+	 * Declare class.
+	 */
 	class ACF_Field_For_Contact_form_7 {
+
 		/**
+		 * ACF Settings.
+		 *
 		 * @var settings
-		 * @var message
 		 */
 		var $settings;
+
+		/**
+		 * Admin notice message.
+		 *
+		 * @var message
+		 */
 		var $message;
+
 		/**
 		 * Calling construct.
 		 */
 		public function __construct() {
-			// Setting
+			// Setting.
 			$this->settings = array(
 				'version' => '1.0',
 				'url' => plugin_dir_url( __FILE__ ),
-				'path' => plugin_dir_path( __FILE__ )
+				'path' => plugin_dir_path( __FILE__ ),
 			);
 			// ACF plugin error message.
 			$this->message = __( 'This website needs "%s" to run. Please download and activate it', 'acf-field-for-contact-form-7' );
-			// Admin notice
+			// Admin notice.
 			add_action( 'admin_notices', array( $this, 'acf_cf7_check_acf_is_activate' ) );
-
-			if ( ! class_exists( 'acf' ) || ! defined( 'WPCF7_VERSION' ) ) return;
-			
-			// version 3
+			// If check required plugin working OR not.
+			if ( ! class_exists( 'acf' ) || ! defined( 'WPCF7_VERSION' ) ) {
+				return;
+			}
+			// version 3.
 			add_action( 'init', array( $this, 'acf_cf7_init' ) );
-			// version 4+
+			// version 4+.
 			add_action( 'acf/register_fields', array( $this, 'acf_cf7_register_fields' ) );
-			// include field ( version 5 )
+			// include field ( version 5 ).
 			add_action( 'acf/include_field_types', array( $this, 'acf_cf7_include_fields' ) );
 		}
 
@@ -39,7 +58,7 @@ if ( ! class_exists( 'ACF_Field_For_Contact_form_7' ) ) {
 		 */
 		public function acf_cf7_init() {
 			// If function exists or not.
-			if( function_exists( 'register_field' ) ) { 
+			if ( function_exists( 'register_field' ) ) {
 				register_field( 'acf_field_cf7', plugin_dir_path( __FILE__ ) . 'acf-fields/acf-contact-form-7-v3.php' );
 			}
 		}
@@ -53,6 +72,8 @@ if ( ! class_exists( 'ACF_Field_For_Contact_form_7' ) ) {
 
 		/**
 		 * ACF5 include field.
+		 *
+		 * @param int $version Plugin version.
 		 */
 		public function acf_cf7_include_fields( $version = 5 ) {
 			require_once plugin_dir_path( __FILE__ ) . 'acf-fields/acf-contact-form-7-v' . $version . '.php';

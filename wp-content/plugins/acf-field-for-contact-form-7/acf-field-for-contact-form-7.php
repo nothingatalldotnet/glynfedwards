@@ -7,12 +7,14 @@
  * Author URI:      https://www.krishaweb.com/
  * Text Domain:     acf-field-for-contact-form-7
  * Domain Path:     /languages
- * Version:         1.3
+ * Version:         1.4
  *
- * @package         Acf_Field_For_Contact_Form_7
+ * @package         ACF_Field_For_Contact_Form_7
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 require_once 'includes/class-' . basename( __FILE__ );
 
@@ -30,7 +32,7 @@ add_action( 'plugins_loaded', 'acf_cf7_textdomain' );
 function acf_cf7_activation() {
 	// Activation code here.
 }
-register_activation_hook( __FILE__, 'acf_cf7_activation' );	
+register_activation_hook( __FILE__, 'acf_cf7_activation' );
 
 /**
  * Plugin deactivation.

@@ -3,7 +3,7 @@ Contributors: dilipbheda, krishaweb
 Tags: acf, contact form 7, advanced custom fields, contact form, forms
 Requires at least: 4.4
 Tested up to: 5.3
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,9 @@ add_filter( 'acf_cf7_object', 'get_acf_cf7_object' );`
 Great! I’d love to hear from you at <a href="mailto:support@krishaweb.com">support@krishaweb.com</a>
 
 == Changelog ==
+
+= 1.4 =
+* Added: ACF pro option page support.
 
 = 1.3 =
 * Fixed: ACF Group field issue.
